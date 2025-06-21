@@ -1,0 +1,98 @@
+/* SuperCursor | content.css */
+/* This file contains styles for all custom cursor effects. */
+
+/* Base container for effects that follow the cursor directly */
+.super-cursor-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999999;
+  pointer-events: none;
+  transition: transform 0.1s ease-out;
+}
+
+/* --- Aura Effect --- */
+.super-cursor-aura {
+  width: 24px; height: 24px; background-color: rgba(187, 134, 252, 0.5);
+  border-radius: 50%; transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px rgba(187, 134, 252, 0.7), 0 0 25px rgba(187, 134, 252, 0.5);
+}
+
+/* --- Starfall Effect --- */
+.super-cursor-star {
+  position: fixed; pointer-events: none; width: 6px; height: 6px;
+  background: white; border-radius: 50%;
+  box-shadow: 0 0 8px white, 0 0 12px #bb86fc, 0 0 16px #03dac6;
+  z-index: 99999998; animation: fall-and-fade 1.2s ease-out forwards;
+}
+@keyframes fall-and-fade {
+  from { transform: translateY(0) scale(1.2); opacity: 1; }
+  to { transform: translateY(120px) scale(0.2); opacity: 0; }
+}
+
+/* --- Ghostly Trail Effect --- */
+.ghost-trail-dot {
+  position: fixed; pointer-events: none; width: 12px; height: 12px;
+  background: #03dac6; border-radius: 50%; z-index: 99999997;
+  transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s linear;
+}
+
+/* --- Electric Orb Effect --- */
+.electric-orb {
+  width: 30px; height: 30px; border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, white, #bb86fc);
+  box-shadow: 0 0 5px white, 0 0 10px #bb86fc, 0 0 20px #bb86fc, 0 0 30px #03dac6, 0 0 40px #03dac6, inset 0 0 10px #fff;
+  animation: electric-crackle 0.1s infinite;
+}
+@keyframes electric-crackle {
+  0% { transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+  50% { transform: translate(-50%, -50%) scale(1.05) rotate(5deg); }
+  100% { transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+}
+
+/* --- Ripples Effect --- */
+.ripple {
+  position: fixed; pointer-events: none; border-radius: 50%;
+  border: 2px solid #03dac6; z-index: 99999996;
+  animation: ripple-expand 0.7s ease-out forwards;
+}
+@keyframes ripple-expand {
+  from { transform: scale(0); opacity: 1; }
+  to { transform: scale(2); opacity: 0; }
+}
+
+/* --- Spotlight Effect --- */
+.spotlight-overlay {
+  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+  pointer-events: none; z-index: 99999995;
+  background: radial-gradient(circle at center, transparent 80px, rgba(0, 0, 0, 0.8) 160px);
+  background-position: -100% -100%; /* Initially hidden */
+}
+
+/* --- Laser Dot Effect --- */
+.laser-dot {
+  width: 8px; height: 8px; background: #ff0055;
+  border-radius: 50%; transform: translate(-50%, -50%);
+  box-shadow: 0 0 5px #ff0055, 0 0 10px white;
+}
+
+/* --- Bubbles Effect --- */
+.bubble {
+  position: fixed; pointer-events: none;
+  width: 12px; height: 12px;
+  border: 2px solid white; border-radius: 50%;
+  z-index: 99999994; background: rgba(3, 218, 198, 0.2);
+  animation: bubble-float 2s ease-out forwards;
+}
+@keyframes bubble-float {
+  from { transform: translateY(0) scale(1); opacity: 1; }
+  to { transform: translateY(-150px) scale(0.5); opacity: 0; }
+}
+
+/* --- Particle Explosion Effect --- */
+.particle {
+  position: fixed; pointer-events: none;
+  width: 8px; height: 8px; border-radius: 50%;
+  z-index: 99999993;
+} 

@@ -1,0 +1,39 @@
+<!-- SuperCursor | popup.html -->
+<!-- This file defines the structure of the extension's popup UI. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SuperCursor</title>
+  <!-- Link to the popup's stylesheet -->
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <!-- Main container for all UI elements -->
+  <div class="container">
+    <h1>SuperCursor</h1>
+    <p>Select your cursor style</p>
+    
+    <!-- Dropdown menu for cursor selection -->
+    <select id="cursor-select">
+      <option value="aura">Aura</option>
+      <option value="starfall">Starfall</option>
+      <option value="aura-starfall">Aura + Stars</option>
+      <option value="ghost-trail">Ghostly Trail</option>
+      <option value="electric-orb">Electric Orb</option>
+      <option value="ripples">Ripples</option>
+      <option value="spotlight">Spotlight</option>
+      <option value="laser-dot">Laser Dot</option>
+      <option value="bubbles">Bubbles</option>
+      <option value="particle-explosion">Particle Explosion (Click)</option>
+    </select>
+    
+    <!-- Button to apply the chosen style -->
+    <button id="apply-button">Apply</button>
+  </div>
+  
+  <!-- Link to the popup's JavaScript logic -->
+  <script src="popup.js"></script>
+</body>
+</html> 
